@@ -4,7 +4,9 @@ const cors = require('cors')
 require("./db/config")
 const Users = require('./db/users');
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+    origin:["https://sonuxkushwaha98.github.io/sonu_portfolio/","http://localhost:3000/sonu_portfolio/"]
+}))
 app.post("/register", async (req, resp) => {
     let user = new Users(req.body);
     let result = await user.save();
