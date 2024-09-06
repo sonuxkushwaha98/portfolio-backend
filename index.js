@@ -7,6 +7,9 @@ app.use(express.json());
 app.use(cors({
     origin:["https://sonuxkushwaha98.github.io/sonu_portfolio"]
 }))
+app.get('/',(req,resp)=>{
+    resp.send("hello")
+})
 app.post("/register", async (req, resp) => {
     let user = new Users(req.body);
     let result = await user.save();
