@@ -5,7 +5,7 @@ require("./db/config")
 const Users = require('./db/users');
 app.use(express.json());
 app.use(cors({
-    origin:["https://sonu-portfolio-sigma.vercel.app"],
+    origin:["https://sonuxkushwaha98.github.io/sonu_portfolio"],
     methods:["POST","GET"],
     credentials:true
 }
