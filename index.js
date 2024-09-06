@@ -10,6 +10,9 @@ app.use(cors({
     credentials:true
 }
 ));
+app.get("/",(req,resp)=>{
+    resp.json{"hello"};
+})
 app.post("/register", async (req, resp) => {
     let user = new Users(req.body);
     let result = await user.save();
