@@ -5,8 +5,11 @@ require("./db/config")
 const Users = require('./db/users');
 app.use(express.json());
 app.use(cors({
-    origin:["https://sonuxkushwaha98.github.io/sonu_portfolio/","http://localhost:3000/sonu_portfolio/"]
-}))
+    origin:["https://sonu-portfolio-sepia.vercel.app/"],
+    methods:["POST","GET"],
+    credentials:true
+}
+));
 app.post("/register", async (req, resp) => {
     let user = new Users(req.body);
     let result = await user.save();
