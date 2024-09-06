@@ -30,4 +30,4 @@ app.post("/login", async (req, resp) => {
 
 
 })
-app.listen(process.env.port || 8000);
+app.listen(process.env.PORT );
