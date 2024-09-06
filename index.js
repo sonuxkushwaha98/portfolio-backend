@@ -11,7 +11,7 @@ app.use(cors({
 }
 ));
 app.get("/",(req,resp)=>{
-    resp.json{"hello"};
+    resp.send{"hello"};
 })
 app.post("/register", async (req, resp) => {
     let user = new Users(req.body);
